@@ -28,7 +28,10 @@
         "status": "active"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录",
+      "log_id": "EVT-00586",
+      "log_id_noise": "EVT-00586",
+      "log_id_paraphrased": "EVT-05089"
     },
     {
       "original_log_id": "LOG-002",
@@ -47,7 +50,10 @@
         "sla_threshold": "99.99%"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录",
+      "log_id": "EVT-04408",
+      "log_id_noise": "EVT-04408",
+      "log_id_paraphrased": "EVT-02450"
     },
     {
       "original_log_id": "LOG-003",
@@ -67,7 +73,10 @@
         "alarm_name": "bill-progress-delay"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录",
+      "log_id": "EVT-00267",
+      "log_id_noise": "EVT-00267",
+      "log_id_paraphrased": "EVT-04677"
     },
     {
       "original_log_id": "LOG-004",
@@ -87,7 +96,10 @@
         "check_type": "health"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/拨测检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/拨测巡检/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/拨测巡检/执行记录",
+      "log_id": "EVT-05040",
+      "log_id_noise": "EVT-05040",
+      "log_id_paraphrased": "EVT-03769"
     },
     {
       "original_log_id": "LOG-005",
@@ -107,7 +119,10 @@
         "scope": "unchanged_nodes"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/容量检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/容量审查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/容量审查/执行记录",
+      "log_id": "EVT-03649",
+      "log_id_noise": "EVT-03649",
+      "log_id_paraphrased": "EVT-00356"
     },
     {
       "original_log_id": "LOG-006",
@@ -126,7 +141,10 @@
         "indicator": "response_latency"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录",
+      "log_id": "EVT-00002",
+      "log_id_noise": "EVT-00002",
+      "log_id_paraphrased": "EVT-05067"
     },
     {
       "original_log_id": "LOG-007",
@@ -145,7 +163,10 @@
         "indicator": "exception_rate"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录",
+      "log_id": "EVT-00142",
+      "log_id_noise": "EVT-00142",
+      "log_id_paraphrased": "EVT-01036"
     },
     {
       "original_log_id": "LOG-008",
@@ -164,7 +185,10 @@
         "indicator": "throughput"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录",
+      "log_id": "EVT-00973",
+      "log_id_noise": "EVT-00973",
+      "log_id_paraphrased": "EVT-05056"
     },
     {
       "original_log_id": "LOG-009",
@@ -183,7 +207,10 @@
         "indicator": "api_call_count"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录",
+      "log_id": "EVT-04454",
+      "log_id_noise": "EVT-04454",
+      "log_id_paraphrased": "EVT-01175"
     },
     {
       "original_log_id": "LOG-010",
@@ -202,7 +229,10 @@
         "indicator": "ingress_traffic"
       },
       "original_related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录",
+      "log_id": "EVT-00233",
+      "log_id_noise": "EVT-00233",
+      "log_id_paraphrased": "EVT-00872"
     },
     {
       "original_log_id": "LOG-011",
@@ -221,7 +251,10 @@
         "check": "non_standard_items"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/非标项分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/非标配置分析/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/非标配置分析/执行记录",
+      "log_id": "EVT-01503",
+      "log_id_noise": "EVT-01503",
+      "log_id_paraphrased": "EVT-00983"
     },
     {
       "original_log_id": "LOG-012",
@@ -240,7 +273,10 @@
         "metric": "capacity_ceiling"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/容量评估/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/容量预估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/容量预估/执行记录",
+      "log_id": "EVT-01073",
+      "log_id_noise": "EVT-01073",
+      "log_id_paraphrased": "EVT-03647"
     },
     {
       "original_log_id": "LOG-013",
@@ -260,7 +296,10 @@
         "check_type": "version_compliance"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/版本特性差异分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/版本差异评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/版本差异评估/执行记录",
+      "log_id": "EVT-05150",
+      "log_id_noise": "EVT-05150",
+      "log_id_paraphrased": "EVT-00777"
     },
     {
       "original_log_id": "LOG-014",
@@ -277,7 +316,10 @@
         "check": "api_interface_change"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/API接口变更分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/API变更审查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/API变更审查/执行记录",
+      "log_id": "EVT-04951",
+      "log_id_noise": "EVT-04951",
+      "log_id_paraphrased": "EVT-00859"
     },
     {
       "original_log_id": "LOG-015",
@@ -297,7 +339,10 @@
         "action": "enable_realtime"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录",
+      "log_id": "EVT-00648",
+      "log_id_noise": "EVT-00648",
+      "log_id_paraphrased": "EVT-02020"
     },
     {
       "original_log_id": "LOG-016",
@@ -317,7 +362,10 @@
         "action": "enable_realtime_probe"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录",
+      "log_id": "EVT-03670",
+      "log_id_noise": "EVT-03670",
+      "log_id_paraphrased": "EVT-02432"
     },
     {
       "original_log_id": "LOG-017",
@@ -334,7 +382,10 @@
         "section": "high_risk_assessment"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/高危操作分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/高危动作评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/高危动作评估/执行记录",
+      "log_id": "EVT-00058",
+      "log_id_noise": "EVT-00058",
+      "log_id_paraphrased": "EVT-02125"
     },
     {
       "original_log_id": "LOG-018",
@@ -354,7 +405,10 @@
         "scope": "failure_impact"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/变更可能影响的客户列表/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/客户影响范围/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/客户影响范围/执行记录",
+      "log_id": "EVT-03057",
+      "log_id_noise": "EVT-03057",
+      "log_id_paraphrased": "EVT-01455"
     },
     {
       "original_log_id": "LOG-019",
@@ -373,7 +427,10 @@
         "check_type": "baseline_compliance"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/现网配置检查/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/线上配置核查/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/线上配置核查/执行记录",
+      "log_id": "EVT-00221",
+      "log_id_noise": "EVT-00221",
+      "log_id_paraphrased": "EVT-02814"
     },
     {
       "original_log_id": "LOG-020",
@@ -392,7 +449,10 @@
         "data_category": "critical_config"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/变更前备份/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/操作前备份/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/操作前备份/执行记录",
+      "log_id": "EVT-01152",
+      "log_id_noise": "EVT-01152",
+      "log_id_paraphrased": "EVT-03677"
     },
     {
       "original_log_id": "LOG-021",
@@ -409,7 +469,10 @@
         "section": "failure_impact_analysis"
       },
       "original_related_sop_ref": "01操作检测/2变更分析/变更失败分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/回滚方案分析/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/回滚方案分析/执行记录",
+      "log_id": "EVT-04186",
+      "log_id_noise": "EVT-04186",
+      "log_id_paraphrased": "EVT-03166"
     },
     {
       "original_log_id": "LOG-022",
@@ -426,7 +489,10 @@
         "analysis_type": "blast_radius"
       },
       "original_related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/执行记录",
+      "log_id": "EVT-02202",
+      "log_id_noise": "EVT-02202",
+      "log_id_paraphrased": "EVT-02924"
     },
     {
       "original_log_id": "LOG-023",
@@ -443,7 +509,10 @@
         "section": "grayscale_strategy"
       },
       "original_related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作验证",
-      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/结果校验"
+      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/结果校验",
+      "log_id": "EVT-03562",
+      "log_id_noise": "EVT-03562",
+      "log_id_paraphrased": "EVT-02917"
     },
     {
       "original_log_id": "LOG-024",
@@ -466,7 +535,10 @@
         "confirm_side": "R&D"
       },
       "original_related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录",
+      "log_id": "EVT-01663",
+      "log_id_noise": "EVT-01663",
+      "log_id_paraphrased": "EVT-04693"
     },
     {
       "original_log_id": "LOG-025",
@@ -486,7 +558,10 @@
         "confirm_side": "product_manager"
       },
       "original_related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
-      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录"
+      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录",
+      "log_id": "EVT-00523",
+      "log_id_noise": "EVT-00523",
+      "log_id_paraphrased": "EVT-02725"
     },
     {
       "original_log_id": "LOG-026",
@@ -503,7 +578,10 @@
         "purpose": "create_extend_product"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录",
+      "log_id": "EVT-00004",
+      "log_id_noise": "EVT-00004",
+      "log_id_paraphrased": "EVT-03470"
     },
     {
       "original_log_id": "LOG-027",
@@ -523,7 +601,10 @@
         "selection": "all_nodes"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录",
+      "log_id": "EVT-00993",
+      "log_id_noise": "EVT-00993",
+      "log_id_paraphrased": "EVT-03228"
     },
     {
       "original_log_id": "LOG-028",
@@ -549,7 +630,10 @@
         "api_path": "service/create/obsBillExtendProduct"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录",
+      "log_id": "EVT-01550",
+      "log_id_noise": "EVT-01550",
+      "log_id_paraphrased": "EVT-00392"
     },
     {
       "original_log_id": "LOG-029",
@@ -570,7 +654,10 @@
         "operation_type": "create"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录",
+      "log_id": "EVT-03279",
+      "log_id_noise": "EVT-03279",
+      "log_id_paraphrased": "EVT-01509"
     },
     {
       "original_log_id": "LOG-030",
@@ -588,7 +675,10 @@
         "purpose": "verify_creation"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验",
+      "log_id": "EVT-00401",
+      "log_id_noise": "EVT-00401",
+      "log_id_paraphrased": "EVT-00727"
     },
     {
       "original_log_id": "LOG-031",
@@ -608,7 +698,10 @@
         "purpose": "post_creation_verify"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验",
+      "log_id": "EVT-02398",
+      "log_id_noise": "EVT-02398",
+      "log_id_paraphrased": "EVT-04803"
     },
     {
       "original_log_id": "LOG-032",
@@ -625,7 +718,10 @@
         "shell_command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验",
+      "log_id": "EVT-04382",
+      "log_id_noise": "EVT-04382",
+      "log_id_paraphrased": "EVT-05055"
     },
     {
       "original_log_id": "LOG-033",
@@ -651,7 +747,10 @@
         ]
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验",
+      "log_id": "EVT-01916",
+      "log_id_noise": "EVT-01916",
+      "log_id_paraphrased": "EVT-02468"
     },
     {
       "original_log_id": "LOG-034",
@@ -670,7 +769,10 @@
         "verification_result": "grep_result_confirmed"
       },
       "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
-      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验",
+      "log_id": "EVT-04569",
+      "log_id_noise": "EVT-04569",
+      "log_id_paraphrased": "EVT-04751"
     },
     {
       "original_log_id": "LOG-035",
@@ -690,7 +792,10 @@
         "scan_type": "post_change"
       },
       "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录",
+      "log_id": "EVT-01185",
+      "log_id_noise": "EVT-01185",
+      "log_id_paraphrased": "EVT-00714"
     },
     {
       "original_log_id": "LOG-036",
@@ -710,7 +815,10 @@
         "scan_type": "post_change"
       },
       "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录",
+      "log_id": "EVT-01910",
+      "log_id_noise": "EVT-01910",
+      "log_id_paraphrased": "EVT-00060"
     },
     {
       "original_log_id": "LOG-037",
@@ -730,7 +838,10 @@
         "scan_type": "post_change"
       },
       "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录",
+      "log_id": "EVT-01755",
+      "log_id_noise": "EVT-01755",
+      "log_id_paraphrased": "EVT-01560"
     },
     {
       "original_log_id": "LOG-038",
@@ -753,7 +864,10 @@
         "scan_type": "post_change"
       },
       "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录",
+      "log_id": "EVT-01957",
+      "log_id_noise": "EVT-01957",
+      "log_id_paraphrased": "EVT-03817"
     },
     {
       "original_log_id": "LOG-039",
@@ -777,7 +891,10 @@
         "delete_flag": "0"
       },
       "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录",
+      "log_id": "EVT-02315",
+      "log_id_noise": "EVT-02315",
+      "log_id_paraphrased": "EVT-04669"
     },
     {
       "original_log_id": "LOG-040",
@@ -796,7 +913,10 @@
         "action": "filter_records"
       },
       "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
-      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录"
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录",
+      "log_id": "EVT-00658",
+      "log_id_noise": "EVT-00658",
+      "log_id_paraphrased": "EVT-00112"
     },
     {
       "original_log_id": "LOG-041",
@@ -813,7 +933,10 @@
         "separator": "|"
       },
       "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
-      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验",
+      "log_id": "EVT-02095",
+      "log_id_noise": "EVT-02095",
+      "log_id_paraphrased": "EVT-04878"
     },
     {
       "original_log_id": "LOG-042",
@@ -833,7 +956,10 @@
         "field_label": "sku"
       },
       "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
-      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验",
+      "log_id": "EVT-00169",
+      "log_id_noise": "EVT-00169",
+      "log_id_paraphrased": "EVT-01981"
     },
     {
       "original_log_id": "LOG-043",
@@ -856,7 +982,10 @@
         "expected_value": "obs.concise.storage.std.1az:size"
       },
       "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
-      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验",
+      "log_id": "EVT-05181",
+      "log_id_noise": "EVT-05181",
+      "log_id_paraphrased": "EVT-04528"
     },
     {
       "original_log_id": "LOG-044",
@@ -873,7 +1002,10 @@
         "purpose": "delete_extend_product"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录",
+      "log_id": "EVT-04804",
+      "log_id_noise": "EVT-04804",
+      "log_id_paraphrased": "EVT-04005"
     },
     {
       "original_log_id": "LOG-045",
@@ -893,7 +1025,10 @@
         "purpose": "delete_operation"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录",
+      "log_id": "EVT-04583",
+      "log_id_noise": "EVT-04583",
+      "log_id_paraphrased": "EVT-04740"
     },
     {
       "original_log_id": "LOG-046",
@@ -917,7 +1052,10 @@
         "api_path": "service/delete/obsBillExtendProduct"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录",
+      "log_id": "EVT-02508",
+      "log_id_noise": "EVT-02508",
+      "log_id_paraphrased": "EVT-04841"
     },
     {
       "original_log_id": "LOG-047",
@@ -938,7 +1076,10 @@
         "operation_type": "delete"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录",
+      "log_id": "EVT-04959",
+      "log_id_noise": "EVT-04959",
+      "log_id_paraphrased": "EVT-00221"
     },
     {
       "original_log_id": "LOG-048",
@@ -956,7 +1097,10 @@
         "purpose": "verify_deletion"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验",
+      "log_id": "EVT-04676",
+      "log_id_noise": "EVT-04676",
+      "log_id_paraphrased": "EVT-00031"
     },
     {
       "original_log_id": "LOG-049",
@@ -976,7 +1120,10 @@
         "purpose": "post_deletion_verify"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验",
+      "log_id": "EVT-04273",
+      "log_id_noise": "EVT-04273",
+      "log_id_paraphrased": "EVT-03581"
     },
     {
       "original_log_id": "LOG-050",
@@ -993,7 +1140,10 @@
         "shell_command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验",
+      "log_id": "EVT-04010",
+      "log_id_noise": "EVT-04010",
+      "log_id_paraphrased": "EVT-00085"
     },
     {
       "original_log_id": "LOG-051",
@@ -1012,7 +1162,10 @@
         "result": "not_found"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验",
+      "log_id": "EVT-01205",
+      "log_id_noise": "EVT-01205",
+      "log_id_paraphrased": "EVT-04563"
     },
     {
       "original_log_id": "LOG-052",
@@ -1031,7 +1184,10 @@
         "verification_result": "grep_result_empty_confirmed"
       },
       "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
-      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验",
+      "log_id": "EVT-03897",
+      "log_id_noise": "EVT-03897",
+      "log_id_paraphrased": "EVT-04650"
     }
   ]
 }

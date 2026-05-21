@@ -1,0 +1,1 @@
+当前存在两份文件，分别是 SOP 文件 D:\Weilin_Workspace\mock_data\data\sop.md 和事件数据文件 D:\Weilin_Workspace\mock_data\data\event_noise_paraphrased.json。其中 SOP 文件中包含”告警检测”操作，事件 JSON 中包含相关操作数据。要求 Agent 判断”告警检测”这个操作是否被执行；如果已执行，则截取对应事件证据。

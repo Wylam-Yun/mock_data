@@ -1,5 +1,5 @@
 {
-  "dataset_id": "mock_obs_bill_extend_sop_event_logs_v2",
+  "dataset_id": "mock_obs_bill_extend_sop_event_logs",
   "case_id": "CASE-OBS-BILL-EXTEND-001",
   "variables": {
     "DomainId": "domainiddomainiddomainiddo000198",
@@ -12,8 +12,7 @@
   },
   "event_logs": [
     {
-      "log_id": "LOG-001",
-      "related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "log_id": "EVT-00001",
       "event_time": "2025-12-27 22:50:01",
       "actor": "lisi",
       "role": "配合人",
@@ -27,8 +26,7 @@
       "detection_log": "alarm_platform 检测日志：用户 lisi 查询目标集群 cn-east-1-bill-cluster-a 的 bill 组件未处理告警列表。"
     },
     {
-      "log_id": "LOG-002",
-      "related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "log_id": "EVT-00002",
       "event_time": "2025-12-27 22:50:36",
       "actor": "lisi",
       "role": "配合人",
@@ -42,8 +40,7 @@
       "detection_log": "sla_monitor 检测日志：用户 lisi 查看目标集群 SLA 成功率指标，关注成功率是否保持 99.99% 以上。"
     },
     {
-      "log_id": "LOG-003",
-      "related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "log_id": "EVT-00003",
       "event_time": "2025-12-27 22:51:05",
       "actor": "lisi",
       "role": "配合人",
@@ -57,8 +54,7 @@
       "detection_log": "alarm_platform 检测日志：用户 lisi 查询 1043006-bill-progress-delay 告警是否存在。"
     },
     {
-      "log_id": "LOG-004",
-      "related_sop_ref": "01操作检测/1告警等检测/拨测检测/操作步骤",
+      "log_id": "EVT-00004",
       "event_time": "2025-12-27 22:52:10",
       "actor": "lisi",
       "role": "配合人",
@@ -72,8 +68,7 @@
       "detection_log": "probe_platform 检测日志：用户 lisi 查看目标集群 bill 服务拨测运行状态。"
     },
     {
-      "log_id": "LOG-005",
-      "related_sop_ref": "01操作检测/1告警等检测/容量检测/操作步骤",
+      "log_id": "EVT-00005",
       "event_time": "2025-12-27 22:53:20",
       "actor": "lisi",
       "role": "配合人",
@@ -87,8 +82,7 @@
       "detection_log": "capacity_platform 检测日志：用户 lisi 基于灰度策略查看未变更节点是否能承载所有流量。"
     },
     {
-      "log_id": "LOG-006",
-      "related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "log_id": "EVT-00006",
       "event_time": "2025-12-27 22:54:15",
       "actor": "lisi",
       "role": "配合人",
@@ -102,8 +96,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件时延指标。"
     },
     {
-      "log_id": "LOG-007",
-      "related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "log_id": "EVT-00007",
       "event_time": "2025-12-27 22:54:42",
       "actor": "lisi",
       "role": "配合人",
@@ -117,8 +110,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件错误率指标。"
     },
     {
-      "log_id": "LOG-008",
-      "related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "log_id": "EVT-00008",
       "event_time": "2025-12-27 22:55:09",
       "actor": "lisi",
       "role": "配合人",
@@ -132,8 +124,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件流量指标。"
     },
     {
-      "log_id": "LOG-009",
-      "related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
+      "log_id": "EVT-00009",
       "event_time": "2025-12-27 22:56:01",
       "actor": "lisi",
       "role": "配合人",
@@ -147,8 +138,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 组件 API 请求量。"
     },
     {
-      "log_id": "LOG-010",
-      "related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
+      "log_id": "EVT-00010",
       "event_time": "2025-12-27 22:56:31",
       "actor": "lisi",
       "role": "配合人",
@@ -162,8 +152,7 @@
       "detection_log": "gateway_monitor 检测日志：用户 lisi 查看 bill 相关网关流量指标。"
     },
     {
-      "log_id": "LOG-011",
-      "related_sop_ref": "01操作检测/2变更分析/非标项分析/操作步骤",
+      "log_id": "EVT-00011",
       "event_time": "2025-12-27 22:58:00",
       "actor": "lisi",
       "role": "配合人",
@@ -177,8 +166,7 @@
       "detection_log": "config_platform 检测日志：用户 lisi 查询目标集群是否存在现网非标配置。"
     },
     {
-      "log_id": "LOG-012",
-      "related_sop_ref": "01操作检测/2变更分析/容量评估/操作步骤",
+      "log_id": "EVT-00012",
       "event_time": "2025-12-27 22:59:10",
       "actor": "lisi",
       "role": "配合人",
@@ -192,8 +180,7 @@
       "detection_log": "capacity_platform 检测日志：用户 lisi 查询部分节点或线路承载业务时的容量数据。"
     },
     {
-      "log_id": "LOG-013",
-      "related_sop_ref": "01操作检测/2变更分析/版本特性差异分析/操作步骤",
+      "log_id": "EVT-00013",
       "event_time": "2025-12-27 23:00:05",
       "actor": "lisi",
       "role": "配合人",
@@ -207,8 +194,7 @@
       "detection_log": "version_platform 检测日志：用户 lisi 查看 service 当前版本，并与 24.9.0 及以上版本要求进行对照。"
     },
     {
-      "log_id": "LOG-014",
-      "related_sop_ref": "01操作检测/2变更分析/API接口变更分析/操作步骤",
+      "log_id": "EVT-00014",
       "event_time": "2025-12-27 23:01:10",
       "actor": "lisi",
       "role": "配合人",
@@ -221,8 +207,7 @@
       "detection_log": "api_tmg 检测日志：用户 lisi 查询本次变更是否涉及 API 接口变更及 API-TMG 评审记录。"
     },
     {
-      "log_id": "LOG-015",
-      "related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
+      "log_id": "EVT-00015",
       "event_time": "2025-12-27 23:02:00",
       "actor": "lisi",
       "role": "配合人",
@@ -236,8 +221,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 为目标集群 bill 组件开启实时监控。"
     },
     {
-      "log_id": "LOG-016",
-      "related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
+      "log_id": "EVT-00016",
       "event_time": "2025-12-27 23:02:30",
       "actor": "lisi",
       "role": "配合人",
@@ -251,8 +235,7 @@
       "detection_log": "probe_platform 检测日志：用户 lisi 为目标集群 bill 组件开启实时拨测。"
     },
     {
-      "log_id": "LOG-017",
-      "related_sop_ref": "01操作检测/2变更分析/高危操作分析/操作步骤",
+      "log_id": "EVT-00017",
       "event_time": "2025-12-27 23:03:20",
       "actor": "lisi",
       "role": "配合人",
@@ -265,8 +248,7 @@
       "detection_log": "change_order_system 检测日志：用户 lisi 查看本次变更的高危操作分析项、理由及预防措施。"
     },
     {
-      "log_id": "LOG-018",
-      "related_sop_ref": "01操作检测/2变更分析/变更可能影响的客户列表/操作步骤",
+      "log_id": "EVT-00018",
       "event_time": "2025-12-27 23:04:00",
       "actor": "lisi",
       "role": "配合人",
@@ -280,8 +262,7 @@
       "detection_log": "customer_impact_system 检测日志：用户 lisi 查询本次变更失败后可能影响的 V5 客户列表、客户数量、资源和影响时间段。"
     },
     {
-      "log_id": "LOG-019",
-      "related_sop_ref": "01操作检测/2变更分析/现网配置检查/操作步骤",
+      "log_id": "EVT-00019",
       "event_time": "2025-12-27 23:05:00",
       "actor": "lisi",
       "role": "配合人",
@@ -295,8 +276,7 @@
       "detection_log": "config_platform 检测日志：用户 lisi 查询现网配置项及预期结果，用于判断是否符合变更前置条件。"
     },
     {
-      "log_id": "LOG-020",
-      "related_sop_ref": "01操作检测/2变更分析/变更前备份/操作步骤",
+      "log_id": "EVT-00020",
       "event_time": "2025-12-27 23:06:10",
       "actor": "lisi",
       "role": "配合人",
@@ -310,8 +290,7 @@
       "detection_log": "backup_platform 检测日志：用户 lisi 查看关键数据修改场景下的备份策略、备份记录或恢复方案说明。"
     },
     {
-      "log_id": "LOG-021",
-      "related_sop_ref": "01操作检测/2变更分析/变更失败分析/操作步骤",
+      "log_id": "EVT-00021",
       "event_time": "2025-12-27 23:07:00",
       "actor": "lisi",
       "role": "配合人",
@@ -324,8 +303,7 @@
       "detection_log": "change_order_system 检测日志：用户 lisi 查看变更异常、对象不可用、周边服务中断、极端故障等影响及应急措施。"
     },
     {
-      "log_id": "LOG-022",
-      "related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作步骤",
+      "log_id": "EVT-00022",
       "event_time": "2025-12-27 23:08:10",
       "actor": "lisi",
       "role": "配合人",
@@ -338,8 +316,7 @@
       "detection_log": "customer_impact_system 检测日志：用户 lisi 查询用户影响范围、爆炸半径和大客户影响信息。"
     },
     {
-      "log_id": "LOG-023",
-      "related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作验证",
+      "log_id": "EVT-00023",
       "event_time": "2025-12-27 23:08:50",
       "actor": "lisi",
       "role": "配合人",
@@ -352,8 +329,7 @@
       "detection_log": "change_order_system 检测日志：用户 lisi 查看本次变更时间窗、灰度策略和批次间隔信息。"
     },
     {
-      "log_id": "LOG-024",
-      "related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
+      "log_id": "EVT-00024",
       "event_time": "2025-12-27 23:10:00",
       "actor": "lisi",
       "role": "配合人",
@@ -369,8 +345,7 @@
       "detection_log": "im_or_ticket_system 检测日志：用户 lisi 查看研发关于操作类型、DomainId、ProductName、ResourceSpecCode、ExtendProductName 的确认信息。"
     },
     {
-      "log_id": "LOG-025",
-      "related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
+      "log_id": "EVT-00025",
       "event_time": "2025-12-27 23:10:40",
       "actor": "lisi",
       "role": "配合人",
@@ -384,8 +359,7 @@
       "detection_log": "im_or_ticket_system 检测日志：用户 lisi 查看产品经理关于 CBC 侧配置已完成的确认信息。"
     },
     {
-      "log_id": "LOG-026",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "log_id": "EVT-00026",
       "event_time": "2025-12-27 23:30:00",
       "actor": "zhangsan",
       "role": "执行人",
@@ -398,8 +372,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 登录 CAC 平台，准备执行创建增程商品操作。"
     },
     {
-      "log_id": "LOG-027",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "log_id": "EVT-00027",
       "event_time": "2025-12-27 23:30:25",
       "actor": "zhangsan",
       "role": "执行人",
@@ -413,8 +386,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群 cn-east-1-bill-cluster-a 的所有 bill 组件节点。"
     },
     {
-      "log_id": "LOG-028",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "log_id": "EVT-00028",
       "event_time": "2025-12-27 23:31:00",
       "actor": "zhangsan",
       "role": "执行人",
@@ -431,8 +403,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 执行 cac_obs_oam_cli_execute，参数包含 service/create/obsBillExtendProduct、DomainId=domainiddomainiddomainiddo000198、ProductName=get、ExtendProductName=obsBillExtendProductDemo。"
     },
     {
-      "log_id": "LOG-029",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "log_id": "EVT-00029",
       "event_time": "2025-12-27 23:31:30",
       "actor": "zhangsan",
       "role": "执行人",
@@ -447,8 +418,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 提交创建增程商品任务，操作类型为 create。"
     },
     {
-      "log_id": "LOG-030",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "log_id": "EVT-00030",
       "event_time": "2025-12-27 23:36:30",
       "actor": "zhangsan",
       "role": "执行人",
@@ -461,8 +431,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 在创建任务提交约 5 分钟后重新进入 CAC 平台。"
     },
     {
-      "log_id": "LOG-031",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "log_id": "EVT-00031",
       "event_time": "2025-12-27 23:36:55",
       "actor": "zhangsan",
       "role": "执行人",
@@ -476,8 +445,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群所有 bill 组件节点，准备执行配置验证命令。"
     },
     {
-      "log_id": "LOG-032",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "log_id": "EVT-00032",
       "event_time": "2025-12-27 23:37:10",
       "actor": "zhangsan",
       "role": "执行人",
@@ -490,8 +458,7 @@
       "detection_log": "black_screen 检测日志：用户 zhangsan 执行命令 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json。"
     },
     {
-      "log_id": "LOG-033",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "log_id": "EVT-00033",
       "event_time": "2025-12-27 23:37:18",
       "actor": "zhangsan",
       "role": "执行人",
@@ -507,8 +474,7 @@
       "detection_log": "black_screen 检测日志：用户 zhangsan 查看 grep 回显，回显内容包含 domainiddomainiddomainiddo000198:get 和 obs.concise.storage.std.1az:size。"
     },
     {
-      "log_id": "LOG-034",
-      "related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "log_id": "EVT-00034",
       "event_time": "2025-12-27 23:37:50",
       "actor": "lisi",
       "role": "配合人",
@@ -522,8 +488,7 @@
       "detection_log": "change_order_system 检测日志：用户 lisi 记录创建后验证结果，备注内容包含已查看 grep 回显和增程商品配置记录存在。"
     },
     {
-      "log_id": "LOG-035",
-      "related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "log_id": "EVT-00035",
       "event_time": "2025-12-27 23:40:00",
       "actor": "lisi",
       "role": "配合人",
@@ -537,8 +502,7 @@
       "detection_log": "alarm_platform 检测日志：用户 lisi 变更后查询目标集群 bill 组件告警。"
     },
     {
-      "log_id": "LOG-036",
-      "related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "log_id": "EVT-00036",
       "event_time": "2025-12-27 23:40:30",
       "actor": "lisi",
       "role": "配合人",
@@ -552,8 +516,7 @@
       "detection_log": "probe_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件拨测运行状态。"
     },
     {
-      "log_id": "LOG-037",
-      "related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "log_id": "EVT-00037",
       "event_time": "2025-12-27 23:41:00",
       "actor": "lisi",
       "role": "配合人",
@@ -567,8 +530,7 @@
       "detection_log": "capacity_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件容量状态。"
     },
     {
-      "log_id": "LOG-038",
-      "related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "log_id": "EVT-00038",
       "event_time": "2025-12-27 23:41:30",
       "actor": "lisi",
       "role": "配合人",
@@ -583,8 +545,7 @@
       "detection_log": "monitor_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件性能指标。"
     },
     {
-      "log_id": "LOG-039",
-      "related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
+      "log_id": "EVT-00039",
       "event_time": "2025-12-28 00:10:00",
       "actor": "lisi",
       "role": "配合人",
@@ -600,8 +561,7 @@
       "detection_log": "CAC 检测日志：用户 lisi 执行脚本 cac_obs_service_bill_download，参数 bucket-name=bucket-demo-001，timestamp=2025122716，是否删除已下载话单=0。"
     },
     {
-      "log_id": "LOG-040",
-      "related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
+      "log_id": "EVT-00040",
       "event_time": "2025-12-28 00:10:40",
       "actor": "lisi",
       "role": "配合人",
@@ -615,8 +575,7 @@
       "detection_log": "CAC 检测日志：用户 lisi 在下载的话单文件中过滤本次涉及的 DomainId 和增程计费因子。"
     },
     {
-      "log_id": "LOG-041",
-      "related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "log_id": "EVT-00041",
       "event_time": "2025-12-28 00:11:10",
       "actor": "lisi",
       "role": "配合人",
@@ -629,8 +588,7 @@
       "detection_log": "local_notepad 检测日志：用户 lisi 将 CAC 返回的话单结果粘贴至记事本，便于按竖线分割观察字段。"
     },
     {
-      "log_id": "LOG-042",
-      "related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "log_id": "EVT-00042",
       "event_time": "2025-12-28 00:11:35",
       "actor": "lisi",
       "role": "配合人",
@@ -644,8 +602,7 @@
       "detection_log": "local_notepad 检测日志：用户 lisi 查看话单中以竖线分割的第 8 位 sku 字段。"
     },
     {
-      "log_id": "LOG-043",
-      "related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "log_id": "EVT-00043",
       "event_time": "2025-12-28 00:11:55",
       "actor": "lisi",
       "role": "配合人",
@@ -660,8 +617,7 @@
       "detection_log": "local_notepad 检测日志：用户 lisi 查看话单中以竖线分割的第 13 位计费因子字段，字段内容包含 obs.concise.storage.std.1az:size。"
     },
     {
-      "log_id": "LOG-044",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "log_id": "EVT-00044",
       "event_time": "2025-12-28 00:20:00",
       "actor": "zhangsan",
       "role": "执行人",
@@ -674,8 +630,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 登录 CAC 平台，准备删除本次创建的增程商品配置。"
     },
     {
-      "log_id": "LOG-045",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "log_id": "EVT-00045",
       "event_time": "2025-12-28 00:20:30",
       "actor": "zhangsan",
       "role": "执行人",
@@ -689,8 +644,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群 cn-east-1-bill-cluster-a 的 bill 组件节点，准备执行 delete 脚本。"
     },
     {
-      "log_id": "LOG-046",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "log_id": "EVT-00046",
       "event_time": "2025-12-28 00:21:00",
       "actor": "zhangsan",
       "role": "执行人",
@@ -706,8 +660,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 执行 cac_obs_oam_cli_execute，参数包含 service/delete/obsBillExtendProduct、DomainId=domainiddomainiddomainiddo000198、ProductName=get。"
     },
     {
-      "log_id": "LOG-047",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "log_id": "EVT-00047",
       "event_time": "2025-12-28 00:21:25",
       "actor": "zhangsan",
       "role": "执行人",
@@ -722,8 +675,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 提交删除增程商品任务，操作类型为 delete。"
     },
     {
-      "log_id": "LOG-048",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "log_id": "EVT-00048",
       "event_time": "2025-12-28 00:26:30",
       "actor": "zhangsan",
       "role": "执行人",
@@ -736,8 +688,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 在删除任务提交约 5 分钟后重新进入 CAC 平台。"
     },
     {
-      "log_id": "LOG-049",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "log_id": "EVT-00049",
       "event_time": "2025-12-28 00:26:55",
       "actor": "zhangsan",
       "role": "执行人",
@@ -751,8 +702,7 @@
       "detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群所有 bill 组件节点，准备执行删除后 grep 验证。"
     },
     {
-      "log_id": "LOG-050",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "log_id": "EVT-00050",
       "event_time": "2025-12-28 00:27:10",
       "actor": "zhangsan",
       "role": "执行人",
@@ -765,8 +715,7 @@
       "detection_log": "black_screen 检测日志：用户 zhangsan 删除后执行命令 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json。"
     },
     {
-      "log_id": "LOG-051",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "log_id": "EVT-00051",
       "event_time": "2025-12-28 00:27:20",
       "actor": "zhangsan",
       "role": "执行人",
@@ -780,8 +729,7 @@
       "detection_log": "black_screen 检测日志：用户 zhangsan 查看删除后 grep 回显，未查询到 domainiddomainiddomainiddo000198:get 对应配置。"
     },
     {
-      "log_id": "LOG-052",
-      "related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "log_id": "EVT-00052",
       "event_time": "2025-12-28 00:27:50",
       "actor": "lisi",
       "role": "配合人",
