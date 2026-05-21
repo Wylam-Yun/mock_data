@@ -1,0 +1,1037 @@
+{
+  "description": "原始有效日志与语义改写后的映射对照表",
+  "total_original_useful": 52,
+  "total_paraphrased": 52,
+  "field_changes": {
+    "event_name": "语义改写，用不同措辞表达相同含义",
+    "event_type": "部分替换为近义词（如 query→fetch, action→enable）",
+    "detection_log": "语义改写，调整句式和用词",
+    "params": "部分字段重命名或增加别名字段",
+    "related_sop_ref": "语义改写，用不同命名体系表达相同 SOP 路径"
+  },
+  "mappings": [
+    {
+      "original_log_id": "LOG-001",
+      "original_event_name": "查询未处理告警",
+      "original_detection_log": "alarm_platform 检测日志：用户 lisi 查询目标集群 cn-east-1-bill-cluster-a 的 bill 组件未处理告警列表。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "拉取集群活跃告警",
+      "new_event_type": "fetch",
+      "new_detection_log": "alarm_platform 运行日志：lisi 对 cn-east-1-bill-cluster-a 集群的 bill 模块执行活跃告警拉取操作。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "module": "bill",
+        "status": "active"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-002",
+      "original_event_name": "查看集群 SLA 成功率",
+      "original_detection_log": "sla_monitor 检测日志：用户 lisi 查看目标集群 SLA 成功率指标，关注成功率是否保持 99.99% 以上。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "metric": "SLA_success_rate"
+      },
+      "new_event_name": "获取 SLA 可用性数据",
+      "new_event_type": "fetch",
+      "new_detection_log": "sla_monitor 运行日志：lisi 请求获取 cn-east-1-bill-cluster-a 的 SLA 可用性百分比，阈值为 99.99%。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "metric": "SLA_success_rate",
+        "sla_threshold": "99.99%"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-003",
+      "original_event_name": "查询 1043006-bill-progress-delay 告警",
+      "original_detection_log": "alarm_platform 检测日志：用户 lisi 查询 1043006-bill-progress-delay 告警是否存在。",
+      "original_params": {
+        "alarm_id": "1043006-bill-progress-delay",
+        "component": "bill"
+      },
+      "new_event_name": "检索计费进度延迟告警",
+      "new_event_type": "search",
+      "new_detection_log": "alarm_platform 运行日志：lisi 检索编号 1043006 的 bill-progress-delay 告警是否处于触发状态。",
+      "new_params": {
+        "alarm_id": "1043006-bill-progress-delay",
+        "component": "bill",
+        "alarm_number": "1043006",
+        "alarm_name": "bill-progress-delay"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/告警检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/告警排查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-004",
+      "original_event_name": "检测拨测运行状态",
+      "original_detection_log": "probe_platform 检测日志：用户 lisi 查看目标集群 bill 服务拨测运行状态。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "probe_target": "bill_service"
+      },
+      "new_event_name": "检查拨测任务健康状态",
+      "new_event_type": "check",
+      "new_detection_log": "probe_platform 运行日志：lisi 检查 cn-east-1-bill-cluster-a 集群 bill 服务拨测任务的健康状态。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "probe_target": "bill_service",
+        "service": "bill",
+        "check_type": "health"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/拨测检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/拨测巡检/执行记录"
+    },
+    {
+      "original_log_id": "LOG-005",
+      "original_event_name": "查看未变更节点承载能力",
+      "original_detection_log": "capacity_platform 检测日志：用户 lisi 基于灰度策略查看未变更节点是否能承载所有流量。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "strategy": "gray_release"
+      },
+      "new_event_name": "评估灰度节点流量承载",
+      "new_event_type": "assess",
+      "new_detection_log": "capacity_platform 运行日志：lisi 评估灰度发布场景下未变更节点对全量流量的承载能力。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "strategy": "gray_release",
+        "release_strategy": "gray_release",
+        "scope": "unchanged_nodes"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/容量检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/容量审查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-006",
+      "original_event_name": "查看核心组件时延指标",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件时延指标。",
+      "original_params": {
+        "component": "bill",
+        "metric": "latency"
+      },
+      "new_event_name": "读取 bill 服务响应时延",
+      "new_event_type": "fetch",
+      "new_detection_log": "monitor_platform 运行日志：lisi 读取 bill 核心服务的请求响应时延监控数据。",
+      "new_params": {
+        "component": "bill",
+        "metric": "latency",
+        "indicator": "response_latency"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-007",
+      "original_event_name": "查看核心组件错误率指标",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件错误率指标。",
+      "original_params": {
+        "component": "bill",
+        "metric": "error_rate"
+      },
+      "new_event_name": "读取 bill 服务异常率",
+      "new_event_type": "fetch",
+      "new_detection_log": "monitor_platform 运行日志：lisi 读取 bill 核心服务的请求异常率监控数据。",
+      "new_params": {
+        "component": "bill",
+        "metric": "error_rate",
+        "indicator": "exception_rate"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-008",
+      "original_event_name": "查看核心组件流量指标",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 核心组件流量指标。",
+      "original_params": {
+        "component": "bill",
+        "metric": "traffic"
+      },
+      "new_event_name": "读取 bill 服务吞吐量",
+      "new_event_type": "fetch",
+      "new_detection_log": "monitor_platform 运行日志：lisi 读取 bill 核心服务的请求吞吐量监控数据。",
+      "new_params": {
+        "component": "bill",
+        "metric": "traffic",
+        "indicator": "throughput"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/核心组件性能&运行状态检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/核心组件健康检查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-009",
+      "original_event_name": "查看 API 请求量",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 查看 bill 组件 API 请求量。",
+      "original_params": {
+        "component": "bill",
+        "metric": "api_request_count"
+      },
+      "new_event_name": "读取 bill 接口调用量",
+      "new_event_type": "fetch",
+      "new_detection_log": "monitor_platform 运行日志：lisi 读取 bill 服务 API 接口的调用次数统计。",
+      "new_params": {
+        "component": "bill",
+        "metric": "api_request_count",
+        "indicator": "api_call_count"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-010",
+      "original_event_name": "查看网关流量",
+      "original_detection_log": "gateway_monitor 检测日志：用户 lisi 查看 bill 相关网关流量指标。",
+      "original_params": {
+        "component": "bill",
+        "metric": "gateway_traffic"
+      },
+      "new_event_name": "读取 bill 网关入口流量",
+      "new_event_type": "fetch",
+      "new_detection_log": "gateway_monitor 运行日志：lisi 读取 bill 相关网关入口的流量统计数据。",
+      "new_params": {
+        "component": "bill",
+        "metric": "gateway_traffic",
+        "indicator": "ingress_traffic"
+      },
+      "original_related_sop_ref": "01操作检测/1告警等检测/性能检测/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.1 告警排查/性能评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-011",
+      "original_event_name": "查看现网非标配置",
+      "original_detection_log": "config_platform 检测日志：用户 lisi 查询目标集群是否存在现网非标配置。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "config_type": "non_standard"
+      },
+      "new_event_name": "排查现网非标项",
+      "new_event_type": "check",
+      "new_detection_log": "config_platform 运行日志：lisi 排查 cn-east-1-bill-cluster-a 集群是否存在非标配置项。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "config_type": "non_standard",
+        "check": "non_standard_items"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/非标项分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/非标配置分析/执行记录"
+    },
+    {
+      "original_log_id": "LOG-012",
+      "original_event_name": "评估部分节点承载容量",
+      "original_detection_log": "capacity_platform 检测日志：用户 lisi 查询部分节点或线路承载业务时的容量数据。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "scope": "partial_nodes_or_lines"
+      },
+      "new_event_name": "测算局部节点承载上限",
+      "new_event_type": "assess",
+      "new_detection_log": "capacity_platform 运行日志：lisi 测算部分节点或线路承载业务时的容量上限。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "scope": "partial_nodes_or_lines",
+        "metric": "capacity_ceiling"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/容量评估/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/容量预估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-013",
+      "original_event_name": "查看 service 版本",
+      "original_detection_log": "version_platform 检测日志：用户 lisi 查看 service 当前版本，并与 24.9.0 及以上版本要求进行对照。",
+      "original_params": {
+        "component": "service",
+        "required_version": "24.9.0"
+      },
+      "new_event_name": "核对 service 版本号",
+      "new_event_type": "verify",
+      "new_detection_log": "version_platform 运行日志：lisi 核对 service 当前版本是否满足 24.9.0 及以上的准入要求。",
+      "new_params": {
+        "component": "service",
+        "required_version": "24.9.0",
+        "minimum_version": "24.9.0",
+        "check_type": "version_compliance"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/版本特性差异分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/版本差异评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-014",
+      "original_event_name": "查看 API-TMG 评审记录",
+      "original_detection_log": "api_tmg 检测日志：用户 lisi 查询本次变更是否涉及 API 接口变更及 API-TMG 评审记录。",
+      "original_params": {
+        "change_order_id": "CHG-20251227-001"
+      },
+      "new_event_name": "查阅 API-TMG 评审结论",
+      "new_event_type": "search",
+      "new_detection_log": "api_tmg 运行日志：lisi 查阅本次变更是否涉及 API 接口变更及对应的 API-TMG 评审结论。",
+      "new_params": {
+        "change_order_id": "CHG-20251227-001",
+        "check": "api_interface_change"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/API接口变更分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/API变更审查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-015",
+      "original_event_name": "开启实时监控",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 为目标集群 bill 组件开启实时监控。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "启动实时指标采集",
+      "new_event_type": "enable",
+      "new_detection_log": "monitor_platform 运行日志：lisi 为 cn-east-1-bill-cluster-a 的 bill 模块启动实时指标采集。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "module": "bill",
+        "action": "enable_realtime"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-016",
+      "original_event_name": "开启实时拨测",
+      "original_detection_log": "probe_platform 检测日志：用户 lisi 为目标集群 bill 组件开启实时拨测。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "启动实时拨测采集",
+      "new_event_type": "enable",
+      "new_detection_log": "probe_platform 运行日志：lisi 为 cn-east-1-bill-cluster-a 的 bill 模块启动实时拨测数据采集。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "module": "bill",
+        "action": "enable_realtime_probe"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/对监控或拨测的影响分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/监控与拨测影响评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-017",
+      "original_event_name": "查看高危操作分析项",
+      "original_detection_log": "change_order_system 检测日志：用户 lisi 查看本次变更的高危操作分析项、理由及预防措施。",
+      "original_params": {
+        "change_order_id": "CHG-20251227-001"
+      },
+      "new_event_name": "浏览高危操作评估",
+      "new_event_type": "browse",
+      "new_detection_log": "change_order_system 运行日志：lisi 浏览本次变更的高危操作评估结论、触发理由及规避措施。",
+      "new_params": {
+        "change_order_id": "CHG-20251227-001",
+        "section": "high_risk_assessment"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/高危操作分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/高危动作评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-018",
+      "original_event_name": "查询 V5 客户影响列表",
+      "original_detection_log": "customer_impact_system 检测日志：用户 lisi 查询本次变更失败后可能影响的 V5 客户列表、客户数量、资源和影响时间段。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "customer_type": "V5"
+      },
+      "new_event_name": "拉取受影响 V5 客户清单",
+      "new_event_type": "fetch",
+      "new_detection_log": "customer_impact_system 运行日志：lisi 拉取变更失败后可能波及的 V5 客户清单、客户数量及影响资源。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "customer_type": "V5",
+        "tier": "V5",
+        "scope": "failure_impact"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/变更可能影响的客户列表/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/客户影响范围/执行记录"
+    },
+    {
+      "original_log_id": "LOG-019",
+      "original_event_name": "检查现网配置项",
+      "original_detection_log": "config_platform 检测日志：用户 lisi 查询现网配置项及预期结果，用于判断是否符合变更前置条件。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "校验现网配置基线",
+      "new_event_type": "verify",
+      "new_detection_log": "config_platform 运行日志：lisi 校验现网配置项是否满足变更前置条件的基线要求。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "check_type": "baseline_compliance"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/现网配置检查/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/线上配置核查/执行记录"
+    },
+    {
+      "original_log_id": "LOG-020",
+      "original_event_name": "查看变更前备份策略",
+      "original_detection_log": "backup_platform 检测日志：用户 lisi 查看关键数据修改场景下的备份策略、备份记录或恢复方案说明。",
+      "original_params": {
+        "change_order_id": "CHG-20251227-001",
+        "data_type": "critical_config"
+      },
+      "new_event_name": "确认变更前备份方案",
+      "new_event_type": "check",
+      "new_detection_log": "backup_platform 运行日志：lisi 确认关键数据修改场景下的备份方案、历史备份记录及恢复路径。",
+      "new_params": {
+        "change_order_id": "CHG-20251227-001",
+        "data_type": "critical_config",
+        "data_category": "critical_config"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/变更前备份/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/操作前备份/执行记录"
+    },
+    {
+      "original_log_id": "LOG-021",
+      "original_event_name": "查看变更失败分析",
+      "original_detection_log": "change_order_system 检测日志：用户 lisi 查看变更异常、对象不可用、周边服务中断、极端故障等影响及应急措施。",
+      "original_params": {
+        "change_order_id": "CHG-20251227-001"
+      },
+      "new_event_name": "浏览变更失败影响分析",
+      "new_event_type": "browse",
+      "new_detection_log": "change_order_system 运行日志：lisi 浏览变更异常、服务不可用、周边中断、极端故障等场景的影响分析及应急预案。",
+      "new_params": {
+        "change_order_id": "CHG-20251227-001",
+        "section": "failure_impact_analysis"
+      },
+      "original_related_sop_ref": "01操作检测/2变更分析/变更失败分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.2 变更评估/回滚方案分析/执行记录"
+    },
+    {
+      "original_log_id": "LOG-022",
+      "original_event_name": "分析用户影响和爆炸半径",
+      "original_detection_log": "customer_impact_system 检测日志：用户 lisi 查询用户影响范围、爆炸半径和大客户影响信息。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198"
+      },
+      "new_event_name": "拉取用户影响及爆炸半径",
+      "new_event_type": "fetch",
+      "new_detection_log": "customer_impact_system 运行日志：lisi 拉取用户影响范围、爆炸半径和大客户波及情况。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "analysis_type": "blast_radius"
+      },
+      "original_related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/执行记录"
+    },
+    {
+      "original_log_id": "LOG-023",
+      "original_event_name": "查看时间窗和灰度策略",
+      "original_detection_log": "change_order_system 检测日志：用户 lisi 查看本次变更时间窗、灰度策略和批次间隔信息。",
+      "original_params": {
+        "change_order_id": "CHG-20251227-001"
+      },
+      "new_event_name": "浏览灰度策略与时间窗",
+      "new_event_type": "browse",
+      "new_detection_log": "change_order_system 运行日志：lisi 浏览本次变更的时间窗口、灰度发布策略及批次间隔设置。",
+      "new_params": {
+        "change_order_id": "CHG-20251227-001",
+        "section": "grayscale_strategy"
+      },
+      "original_related_sop_ref": "01操作检测/3客户影响分析/客户影响分析/操作验证",
+      "new_related_sop_ref": "一、变更前检查/1.3 影响范围/客户影响评估/结果校验"
+    },
+    {
+      "original_log_id": "LOG-024",
+      "original_event_name": "查看研发确认信息",
+      "original_detection_log": "im_or_ticket_system 检测日志：用户 lisi 查看研发关于操作类型、DomainId、ProductName、ResourceSpecCode、ExtendProductName 的确认信息。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "ResourceSpecCode": "obs.concise.storage.std.1az:size",
+        "ExtendProductName": "obsBillExtendProductDemo"
+      },
+      "new_event_name": "查阅研发操作确认记录",
+      "new_event_type": "browse",
+      "new_detection_log": "im_or_ticket_system 运行日志：lisi 查阅研发侧关于操作类型、DomainId、ProductName、ResourceSpecCode、ExtendProductName 的确认记录。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "ResourceSpecCode": "obs.concise.storage.std.1az:size",
+        "ExtendProductName": "obsBillExtendProductDemo",
+        "confirm_side": "R&D"
+      },
+      "original_related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录"
+    },
+    {
+      "original_log_id": "LOG-025",
+      "original_event_name": "查看产品经理 CBC 配置确认",
+      "original_detection_log": "im_or_ticket_system 检测日志：用户 lisi 查看产品经理关于 CBC 侧配置已完成的确认信息。",
+      "original_params": {
+        "ProductName": "get",
+        "config_side": "CBC"
+      },
+      "new_event_name": "查阅产品侧 CBC 配置确认",
+      "new_event_type": "browse",
+      "new_detection_log": "im_or_ticket_system 运行日志：lisi 查阅产品经理侧 CBC 配置已完成的确认记录。",
+      "new_params": {
+        "ProductName": "get",
+        "config_side": "CBC",
+        "platform": "CBC",
+        "confirm_side": "product_manager"
+      },
+      "original_related_sop_ref": "01操作检测/4增程商品配置确认/增程商品确认/操作步骤",
+      "new_related_sop_ref": "一、变更前检查/1.4 增程配置核实/增程配置核实/执行记录"
+    },
+    {
+      "original_log_id": "LOG-026",
+      "original_event_name": "登录 CAC 平台",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 登录 CAC 平台，准备执行创建增程商品操作。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a"
+      },
+      "new_event_name": "进入 OAM 管理控制台",
+      "new_event_type": "authenticate",
+      "new_detection_log": "CAC 运行日志：zhangsan 通过 OAM 管理控制台登录，准备执行 bill 增程商品创建流程。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "purpose": "create_extend_product"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-027",
+      "original_event_name": "选择目标集群 bill 组件节点",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群 cn-east-1-bill-cluster-a 的所有 bill 组件节点。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "勾选 bill 服务节点",
+      "new_event_type": "select",
+      "new_detection_log": "CAC 运行日志：zhangsan 勾选 cn-east-1-bill-cluster-a 集群下所有 bill 服务节点。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "service": "bill",
+        "selection": "all_nodes"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-028",
+      "original_event_name": "执行 cac_obs_oam_cli_execute 创建脚本",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 执行 cac_obs_oam_cli_execute，参数包含 service/create/obsBillExtendProduct、DomainId=domainiddomainiddomainiddo000198、ProductName=get、ExtendProductName=obsBillExtendProductDemo。",
+      "original_params": {
+        "script": "cac_obs_oam_cli_execute",
+        "operation": "service/create/obsBillExtendProduct",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "ExtendProductName": "obsBillExtendProductDemo"
+      },
+      "new_event_name": "下发 obsBillExtendProduct 创建指令",
+      "new_event_type": "execute",
+      "new_detection_log": "CAC 运行日志：zhangsan 通过 OAM 命令行工具下发 service/create/obsBillExtendProduct 指令，携带 DomainId、ProductName、ExtendProductName 参数。",
+      "new_params": {
+        "script": "cac_obs_oam_cli_execute",
+        "operation": "service/create/obsBillExtendProduct",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "ExtendProductName": "obsBillExtendProductDemo",
+        "cli_tool": "cac_obs_oam_cli_execute",
+        "api_path": "service/create/obsBillExtendProduct"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-029",
+      "original_event_name": "提交创建增程商品任务",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 提交创建增程商品任务，操作类型为 create。",
+      "original_params": {
+        "operation": "create",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "确认提交创建工单",
+      "new_event_type": "confirm",
+      "new_detection_log": "CAC 运行日志：zhangsan 确认提交 bill 增程商品创建工单，操作类型为 create。",
+      "new_params": {
+        "operation": "create",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "operation_type": "create"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作步骤",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-030",
+      "original_event_name": "等待 5 分钟后登录 CAC",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 在创建任务提交约 5 分钟后重新进入 CAC 平台。",
+      "original_params": {
+        "wait_minutes": 5
+      },
+      "new_event_name": "等待生效后重新进入 OAM",
+      "new_event_type": "authenticate",
+      "new_detection_log": "CAC 运行日志：zhangsan 等待约 5 分钟后重新进入 OAM 管理控制台进行结果验证。",
+      "new_params": {
+        "wait_minutes": 5,
+        "wait_duration_min": 5,
+        "purpose": "verify_creation"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-031",
+      "original_event_name": "选择 bill 组件节点执行验证",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群所有 bill 组件节点，准备执行配置验证命令。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "勾选 bill 节点进行验证",
+      "new_event_type": "select",
+      "new_detection_log": "CAC 运行日志：zhangsan 勾选 cn-east-1-bill-cluster-a 集群下所有 bill 服务节点，准备执行创建后验证。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "service": "bill",
+        "purpose": "post_creation_verify"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-032",
+      "original_event_name": "执行创建后 grep 验证命令",
+      "original_detection_log": "black_screen 检测日志：用户 zhangsan 执行命令 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json。",
+      "original_params": {
+        "command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
+      },
+      "new_event_name": "执行配置文件 grep 校验",
+      "new_event_type": "run",
+      "new_detection_log": "black_screen 运行日志：zhangsan 执行 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json 对配置文件进行内容校验。",
+      "new_params": {
+        "command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json",
+        "shell_command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-033",
+      "original_event_name": "查看创建后 grep 回显",
+      "original_detection_log": "black_screen 检测日志：用户 zhangsan 查看 grep 回显，回显内容包含 domainiddomainiddomainiddo000198:get 和 obs.concise.storage.std.1az:size。",
+      "original_params": {
+        "contains": [
+          "domainiddomainiddomainiddo000198:get",
+          "obs.concise.storage.std.1az:size"
+        ]
+      },
+      "new_event_name": "确认 grep 结果包含预期字段",
+      "new_event_type": "inspect",
+      "new_detection_log": "black_screen 运行日志：zhangsan 确认 grep 回显中包含 domainiddomainiddomainiddo000198:get 和 obs.concise.storage.std.1az:size 两个预期字段。",
+      "new_params": {
+        "contains": [
+          "domainiddomainiddomainiddo000198:get",
+          "obs.concise.storage.std.1az:size"
+        ],
+        "expected_fields": [
+          "domainiddomainiddomainiddo000198:get",
+          "obs.concise.storage.std.1az:size"
+        ]
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-034",
+      "original_event_name": "记录创建后验证回显",
+      "original_detection_log": "change_order_system 检测日志：用户 lisi 记录创建后验证结果，备注内容包含已查看 grep 回显和增程商品配置记录存在。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "在变更单备注创建验证结论",
+      "new_event_type": "annotate",
+      "new_detection_log": "change_order_system 运行日志：lisi 在变更单中备注创建后验证结论：已确认 grep 回显包含增程商品配置记录。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "verification_result": "grep_result_confirmed"
+      },
+      "original_related_sop_ref": "02操作处理/1创建增程商品/创建增程商品/操作验证",
+      "new_related_sop_ref": "二、变更执行/2.1 增程商品创建/创建增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-035",
+      "original_event_name": "变更后查询告警",
+      "original_detection_log": "alarm_platform 检测日志：用户 lisi 变更后查询目标集群 bill 组件告警。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "变更后巡检集群告警",
+      "new_event_type": "scan",
+      "new_detection_log": "alarm_platform 运行日志：lisi 变更后对 cn-east-1-bill-cluster-a 集群 bill 模块执行告警巡检。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "module": "bill",
+        "scan_type": "post_change"
+      },
+      "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+    },
+    {
+      "original_log_id": "LOG-036",
+      "original_event_name": "变更后查看拨测",
+      "original_detection_log": "probe_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件拨测运行状态。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "变更后巡检拨测状态",
+      "new_event_type": "scan",
+      "new_detection_log": "probe_platform 运行日志：lisi 变更后巡检 cn-east-1-bill-cluster-a 集群 bill 服务拨测任务状态。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "service": "bill",
+        "scan_type": "post_change"
+      },
+      "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+    },
+    {
+      "original_log_id": "LOG-037",
+      "original_event_name": "变更后查看容量",
+      "original_detection_log": "capacity_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件容量状态。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "变更后巡检容量状态",
+      "new_event_type": "scan",
+      "new_detection_log": "capacity_platform 运行日志：lisi 变更后巡检 cn-east-1-bill-cluster-a 集群 bill 模块容量状态。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "module": "bill",
+        "scan_type": "post_change"
+      },
+      "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+    },
+    {
+      "original_log_id": "LOG-038",
+      "original_event_name": "变更后查看性能指标",
+      "original_detection_log": "monitor_platform 检测日志：用户 lisi 变更后查看目标集群 bill 组件性能指标。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "metric": "performance"
+      },
+      "new_event_name": "变更后巡检性能指标",
+      "new_event_type": "scan",
+      "new_detection_log": "monitor_platform 运行日志：lisi 变更后巡检 cn-east-1-bill-cluster-a 集群 bill 模块性能指标。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "metric": "performance",
+        "module": "bill",
+        "indicator": "performance",
+        "scan_type": "post_change"
+      },
+      "original_related_sop_ref": "03操作验证/1告警等基本检测/告警等基本检测/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.1 基础巡检/基础巡检/执行记录"
+    },
+    {
+      "original_log_id": "LOG-039",
+      "original_event_name": "执行 cac_obs_service_bill_download",
+      "original_detection_log": "CAC 检测日志：用户 lisi 执行脚本 cac_obs_service_bill_download，参数 bucket-name=bucket-demo-001，timestamp=2025122716，是否删除已下载话单=0。",
+      "original_params": {
+        "script": "cac_obs_service_bill_download",
+        "bucket-name": "bucket-demo-001",
+        "timestamp": "2025122716",
+        "delete_downloaded_bill": "0"
+      },
+      "new_event_name": "执行话单拉取脚本",
+      "new_event_type": "execute",
+      "new_detection_log": "CAC 运行日志：lisi 执行 cac_obs_service_bill_download 脚本拉取指定桶和时间戳的话单数据。",
+      "new_params": {
+        "script": "cac_obs_service_bill_download",
+        "bucket-name": "bucket-demo-001",
+        "timestamp": "2025122716",
+        "delete_downloaded_bill": "0",
+        "cli_tool": "cac_obs_service_bill_download",
+        "delete_flag": "0"
+      },
+      "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录"
+    },
+    {
+      "original_log_id": "LOG-040",
+      "original_event_name": "过滤话单中的 DomainId 和计费因子",
+      "original_detection_log": "CAC 检测日志：用户 lisi 在下载的话单文件中过滤本次涉及的 DomainId 和增程计费因子。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "billing_factor": "obs.concise.storage.std.1az:size"
+      },
+      "new_event_name": "在话单中筛选目标 DomainId 和计费因子",
+      "new_event_type": "filter",
+      "new_detection_log": "CAC 运行日志：lisi 在拉取的话单文件中筛选 domainiddomainiddomainiddo000198 和 obs.concise.storage.std.1az:size 对应的记录。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "billing_factor": "obs.concise.storage.std.1az:size",
+        "action": "filter_records"
+      },
+      "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作步骤",
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/执行记录"
+    },
+    {
+      "original_log_id": "LOG-041",
+      "original_event_name": "粘贴话单结果到记事本观察",
+      "original_detection_log": "local_notepad 检测日志：用户 lisi 将 CAC 返回的话单结果粘贴至记事本，便于按竖线分割观察字段。",
+      "original_params": {
+        "field_separator": "|"
+      },
+      "new_event_name": "将话单结果粘贴到文本编辑器",
+      "new_event_type": "copy",
+      "new_detection_log": "local_notepad 运行日志：lisi 将 CAC 返回的话单结果粘贴至文本编辑器，以便按竖线分隔符逐字段查看。",
+      "new_params": {
+        "field_separator": "|",
+        "separator": "|"
+      },
+      "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+    },
+    {
+      "original_log_id": "LOG-042",
+      "original_event_name": "查看话单第8位 sku 字段",
+      "original_detection_log": "local_notepad 检测日志：用户 lisi 查看话单中以竖线分割的第 8 位 sku 字段。",
+      "original_params": {
+        "field_index": 8,
+        "field_name": "sku"
+      },
+      "new_event_name": "定位话单第 8 列 sku 字段",
+      "new_event_type": "inspect",
+      "new_detection_log": "local_notepad 运行日志：lisi 定位话单中以竖线分隔的第 8 列 sku 字段并读取其值。",
+      "new_params": {
+        "field_index": 8,
+        "field_name": "sku",
+        "column_index": 8,
+        "field_label": "sku"
+      },
+      "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+    },
+    {
+      "original_log_id": "LOG-043",
+      "original_event_name": "查看话单第13位计费因子字段",
+      "original_detection_log": "local_notepad 检测日志：用户 lisi 查看话单中以竖线分割的第 13 位计费因子字段，字段内容包含 obs.concise.storage.std.1az:size。",
+      "original_params": {
+        "field_index": 13,
+        "field_name": "billing_factor",
+        "billing_factor": "obs.concise.storage.std.1az:size"
+      },
+      "new_event_name": "定位话单第 13 列计费因子字段",
+      "new_event_type": "inspect",
+      "new_detection_log": "local_notepad 运行日志：lisi 定位话单中以竖线分隔的第 13 列计费因子字段，确认内容包含 obs.concise.storage.std.1az:size。",
+      "new_params": {
+        "field_index": 13,
+        "field_name": "billing_factor",
+        "billing_factor": "obs.concise.storage.std.1az:size",
+        "column_index": 13,
+        "field_label": "billing_factor",
+        "expected_value": "obs.concise.storage.std.1az:size"
+      },
+      "original_related_sop_ref": "03操作验证/1验证配置的增程商品是否生效/验证配置的增程商品是否生效/操作验证",
+      "new_related_sop_ref": "三、变更后验证/3.2 增程配置生效验证/增程配置生效验证/结果校验"
+    },
+    {
+      "original_log_id": "LOG-044",
+      "original_event_name": "登录 CAC 执行删除",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 登录 CAC 平台，准备删除本次创建的增程商品配置。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a"
+      },
+      "new_event_name": "进入 OAM 执行删除准备",
+      "new_event_type": "authenticate",
+      "new_detection_log": "CAC 运行日志：zhangsan 进入 OAM 管理控制台，准备执行本次增程商品配置的删除操作。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "purpose": "delete_extend_product"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-045",
+      "original_event_name": "选择目标集群 bill 节点执行删除",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群 cn-east-1-bill-cluster-a 的 bill 组件节点，准备执行 delete 脚本。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "勾选 bill 节点执行删除",
+      "new_event_type": "select",
+      "new_detection_log": "CAC 运行日志：zhangsan 勾选 cn-east-1-bill-cluster-a 集群下所有 bill 服务节点，准备执行删除脚本。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "service": "bill",
+        "purpose": "delete_operation"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-046",
+      "original_event_name": "执行 cac_obs_oam_cli_execute 删除脚本",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 执行 cac_obs_oam_cli_execute，参数包含 service/delete/obsBillExtendProduct、DomainId=domainiddomainiddomainiddo000198、ProductName=get。",
+      "original_params": {
+        "script": "cac_obs_oam_cli_execute",
+        "operation": "service/delete/obsBillExtendProduct",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "下发 obsBillExtendProduct 删除指令",
+      "new_event_type": "execute",
+      "new_detection_log": "CAC 运行日志：zhangsan 通过 OAM 命令行工具下发 service/delete/obsBillExtendProduct 指令，携带 DomainId 和 ProductName 参数。",
+      "new_params": {
+        "script": "cac_obs_oam_cli_execute",
+        "operation": "service/delete/obsBillExtendProduct",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "cli_tool": "cac_obs_oam_cli_execute",
+        "api_path": "service/delete/obsBillExtendProduct"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-047",
+      "original_event_name": "提交删除增程商品任务",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 提交删除增程商品任务，操作类型为 delete。",
+      "original_params": {
+        "operation": "delete",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "确认提交删除工单",
+      "new_event_type": "confirm",
+      "new_detection_log": "CAC 运行日志：zhangsan 确认提交 bill 增程商品删除工单，操作类型为 delete。",
+      "new_params": {
+        "operation": "delete",
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "operation_type": "delete"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作步骤",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/执行记录"
+    },
+    {
+      "original_log_id": "LOG-048",
+      "original_event_name": "等待后进入 CAC 做删除验证",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 在删除任务提交约 5 分钟后重新进入 CAC 平台。",
+      "original_params": {
+        "wait_minutes": 5
+      },
+      "new_event_name": "等待生效后进入 OAM 验证删除",
+      "new_event_type": "authenticate",
+      "new_detection_log": "CAC 运行日志：zhangsan 等待约 5 分钟后重新进入 OAM 管理控制台验证删除结果。",
+      "new_params": {
+        "wait_minutes": 5,
+        "wait_duration_min": 5,
+        "purpose": "verify_deletion"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-049",
+      "original_event_name": "选择 bill 节点执行删除后 grep",
+      "original_detection_log": "CAC 检测日志：用户 zhangsan 选择目标集群所有 bill 组件节点，准备执行删除后 grep 验证。",
+      "original_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill"
+      },
+      "new_event_name": "勾选 bill 节点做删除后校验",
+      "new_event_type": "select",
+      "new_detection_log": "CAC 运行日志：zhangsan 勾选 cn-east-1-bill-cluster-a 集群下所有 bill 服务节点，准备执行删除后 grep 校验。",
+      "new_params": {
+        "TargetCluster": "cn-east-1-bill-cluster-a",
+        "component": "bill",
+        "service": "bill",
+        "purpose": "post_deletion_verify"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-050",
+      "original_event_name": "执行删除后 grep 验证命令",
+      "original_detection_log": "black_screen 检测日志：用户 zhangsan 删除后执行命令 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json。",
+      "original_params": {
+        "command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
+      },
+      "new_event_name": "执行删除后配置文件 grep 校验",
+      "new_event_type": "run",
+      "new_detection_log": "black_screen 运行日志：zhangsan 删除后执行 grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json 校验配置是否已清除。",
+      "new_params": {
+        "command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json",
+        "shell_command": "grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-051",
+      "original_event_name": "查看删除后 grep 回显",
+      "original_detection_log": "black_screen 检测日志：用户 zhangsan 查看删除后 grep 回显，未查询到 domainiddomainiddomainiddo000198:get 对应配置。",
+      "original_params": {
+        "query_key": "domainiddomainiddomainiddo000198:get",
+        "output": "not_found"
+      },
+      "new_event_name": "确认 grep 结果无目标记录",
+      "new_event_type": "inspect",
+      "new_detection_log": "black_screen 运行日志：zhangsan 确认 grep 回显中未查询到 domainiddomainiddomainiddo000198:get 对应的配置记录，表明删除成功。",
+      "new_params": {
+        "query_key": "domainiddomainiddomainiddo000198:get",
+        "output": "not_found",
+        "result": "not_found"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+    },
+    {
+      "original_log_id": "LOG-052",
+      "original_event_name": "记录删除后验证结果",
+      "original_detection_log": "change_order_system 检测日志：用户 lisi 记录删除后验证结果，备注内容包含已查看删除后 grep 回显，未查询到本次增程商品配置。",
+      "original_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get"
+      },
+      "new_event_name": "在变更单备注删除验证结论",
+      "new_event_type": "annotate",
+      "new_detection_log": "change_order_system 运行日志：lisi 在变更单中备注删除后验证结论：已确认 grep 回显中无本次增程商品配置记录。",
+      "new_params": {
+        "DomainId": "domainiddomainiddomainiddo000198",
+        "ProductName": "get",
+        "verification_result": "grep_result_empty_confirmed"
+      },
+      "original_related_sop_ref": "04操作回退/1删除增程商品/删除增程商品/操作验证",
+      "new_related_sop_ref": "四、回滚操作/4.1 增程商品删除/删除增程商品/结果校验"
+    }
+  ]
+}
