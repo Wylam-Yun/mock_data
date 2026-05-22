@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-05-22T07:45:00.000Z" agent="5.0" etag="1" version="24.7.17" type="device">
+  <diagram id="sop-v3-final" name="增程商品变更SOP责任泳道图v3-责任矩阵版">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- 标题 -->
+        <mxCell id="title" value="增程商品变更 SOP 责任泳道图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1E3A8A;" vertex="1" parent="1">
+          <mxGeometry x="0" y="10" width="1600" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="1+1变更场景：SOP动作类型 → 执行人动作证据 → 配合人验证证据" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="0" y="38" width="1600" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- 泳道容器 -->
+        <mxCell id="container" value="" style="swimlane;startSize=0;container=1;collapsible=0;fillColor=none;strokeColor=#CCCCCC;swimlaneLine=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="60" width="1600" height="830" as="geometry"/>
+        </mxCell>
+
+        <!-- 列标题 -->
+        <mxCell id="lane1_title" value="SOP步骤（主时间线）" style="swimlane;startSize=40;container=0;collapsible=0;fillColor=#1E3A8A;fontColor=#FFFFFF;strokeColor=#1E3A8A;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="container">
+          <mxGeometry x="0" y="0" width="280" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane2_title" value="执行人（动作证据）" style="swimlane;startSize=40;container=0;collapsible=0;fillColor=#1E3A8A;fontColor=#FFFFFF;strokeColor=#1E3A8A;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="container">
+          <mxGeometry x="280" y="0" width="440" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane3_title" value="配合人（验证证据）" style="swimlane;startSize=40;container=0;collapsible=0;fillColor=#1E3A8A;fontColor=#FFFFFF;strokeColor=#1E3A8A;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="container">
+          <mxGeometry x="720" y="0" width="880" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- 行分隔线 -->
+        <mxCell id="line1" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="145" as="sourcePoint"/>
+            <mxPoint x="1600" y="145" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line2" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="245" as="sourcePoint"/>
+            <mxPoint x="1600" y="245" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line3" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="345" as="sourcePoint"/>
+            <mxPoint x="1600" y="345" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line4" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="445" as="sourcePoint"/>
+            <mxPoint x="1600" y="445" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line5" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="545" as="sourcePoint"/>
+            <mxPoint x="1600" y="545" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line6" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="645" as="sourcePoint"/>
+            <mxPoint x="1600" y="645" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line7" value="" style="line;strokeWidth=1;strokeColor=#E0E0E0;fillColor=none;" edge="1" parent="container">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="745" as="sourcePoint"/>
+            <mxPoint x="1600" y="745" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== 第1行：告警等检测 (y=50) ========== -->
+        <mxCell id="n1_1" value="01 操作检测&#xa;1 告警等检测" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="55" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n1_2" value="[等待/放行]&#xa;等待配合人检查通过" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=11;align=center;verticalAlign=middle;fontColor=#999999;" vertex="1" parent="container">
+          <mxGeometry x="300" y="55" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n1_3" value="[影响分析]&#xa;**告警检测**：未处理告警/SLA≥99.99%/1043006告警/联系oncall&#xa;**拨测检测**：拨测运行状态/异常需恢复&#xa;**容量检测**：未变更节点流量承载&#xa;**核心组件性能**：时延/错误率/流量&#xa;**性能检测**：API请求量/网关流量&#xa;结论：有风险则禁止继续" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="55" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第2行：变更分析 (y=155) ========== -->
+        <mxCell id="n2_1" value="01 操作检测&#xa;2 变更分析" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="155" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n2_2" value="[等待/放行]&#xa;等待分析结论" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=11;align=center;verticalAlign=middle;fontColor=#999999;" vertex="1" parent="container">
+          <mxGeometry x="300" y="155" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n2_3" value="[影响分析]&#xa;**10项分析**：①非标项 ②容量评估 ③版本特性差异 ④API接口变更&#xa;⑤监控/拨测影响 ⑥高危操作 ⑦客户列表 ⑧现网配置检查&#xa;⑨变更前备份 ⑩变更失败分析&#xa;每项需给出处理措施，如中止变更" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="155" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第3行：客户影响分析 (y=255) ========== -->
+        <mxCell id="n3_1" value="01 操作检测&#xa;3 客户影响分析" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="255" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n3_2" value="[等待/放行]&#xa;等待分析结论" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=11;align=center;verticalAlign=middle;fontColor=#999999;" vertex="1" parent="container">
+          <mxGeometry x="300" y="255" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n3_3" value="[影响分析]&#xa;**客户影响分析**：用户影响/爆炸半径/大客户影响/风险控制措施&#xa;**验证**：确认时间窗/灰度策略/批次间隔&#xa;风险不可控时发起重大变更评审" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="255" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第4行：增程商品配置确认 (y=355) ========== -->
+        <mxCell id="n4_1" value="01 操作检测&#xa;4 增程商品配置确认" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="355" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n4_2" value="[等待/放行]&#xa;等待配置确认完成后进入操作处理&#xa;（可选：grep预验证辅助确认）" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=11;align=center;verticalAlign=middle;fontColor=#999999;" vertex="1" parent="container">
+          <mxGeometry x="300" y="355" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n4_3" value="[操作验证]&#xa;**增程商品确认**：与研发确认操作类型/DomainId/ProductName/&#xa;ResourceSpecCode/ExtendProductName&#xa;与产品经理确认CBC侧配置完成&#xa;配合人核对grep回显，异常时联系研发" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="355" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第5行：创建增程商品 (y=455) ========== -->
+        <mxCell id="n5_1" value="02 操作处理&#xa;1 创建增程商品" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="455" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n5_2" value="[操作步骤]&#xa;**创建增程商品**&#xa;登录CAC → 选择目标集群&#xa;执行 create / obs_oam_cli_execute&#xa;参数：service/create/obsBillExtendProduct/${DomainId}/${ExtendProductName}&#xa;提交任务" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="300" y="455" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n5_3" value="[操作验证]&#xa;**验证配置写入**&#xa;等待5分钟 → 登录CAC → 选择bill组件节点&#xa;grep -A 3 '${DomainId}:${ProductName}' bill_extend_product.json&#xa;配合人查看grep回显，异常时联系研发&#xa;数据源：SRE作业平台" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="455" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- 水平箭头：n5_2 -> n5_3 -->
+        <mxCell id="e5_h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E3A8A;strokeWidth=2;" edge="1" parent="container" source="n5_2" target="n5_3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第6行：告警等基本检测 (y=555) ========== -->
+        <mxCell id="n6_1" value="03 操作验证&#xa;1 告警等基本检测" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="555" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n6_2" value="[等待/放行]&#xa;等待检查结果" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=11;align=center;verticalAlign=middle;fontColor=#999999;" vertex="1" parent="container">
+          <mxGeometry x="300" y="555" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n6_3" value="[操作验证]&#xa;**告警等基本检测**&#xa;按操作检测中的4类检测项重新执行&#xa;①告警检测 ②拨测检测 ③容量检测 ④性能检测&#xa;目的：变更后健康状态复检" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="555" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第7行：验证配置生效 (y=655) ========== -->
+        <mxCell id="n7_1" value="03 操作验证&#xa;2 验证配置的增程商品是否生效" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="655" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n7_2" value="[操作步骤]&#xa;**验证配置生效**&#xa;执行 cac_obs_service_bill_download&#xa;参数：bucket-name/timestamp/删除话单=0&#xa;数据源：CAC平台" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="300" y="655" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n7_3" value="[操作验证]&#xa;**核对验证结果**&#xa;过滤DomainId + 增程计费因子&#xa;验证sku（第8位字段）+ 计费因子（第13位字段）&#xa;如CAC返回值未按行输出，粘贴至记事本观察&#xa;数据源：CAC平台 / 脚本执行结果" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="655" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- 水平箭头：n7_2 -> n7_3 -->
+        <mxCell id="e7_h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E3A8A;strokeWidth=2;" edge="1" parent="container" source="n7_2" target="n7_3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ========== 第8行：删除增程商品 (y=755) ========== -->
+        <mxCell id="n8_1" value="04 操作回退&#xa;1 删除增程商品" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="container">
+          <mxGeometry x="15" y="755" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n8_2" value="[操作回退]&#xa;**删除增程商品**&#xa;登录CAC → 执行 delete 脚本&#xa;参数：service/delete/obsBillExtendProduct/DomainId=${DomainId}&#xa;填写DomainId/ProductName → 提交任务" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="300" y="755" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="n8_3" value="[回退验证]&#xa;**确认删除结果**&#xa;等待时间到达 → 登录CAC → grep验证删除结果&#xa;配合人查看删除后grep回显&#xa;如仍能查到记录，联系研发确认&#xa;必要时复查配置、告警、业务影响" style="rounded=10;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="container">
+          <mxGeometry x="740" y="755" width="720" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- 水平箭头：n8_2 -> n8_3 -->
+        <mxCell id="e8_h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1E3A8A;strokeWidth=2;" edge="1" parent="container" source="n8_2" target="n8_3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 图例（左下角） -->
+        <mxCell id="legend_title" value="图例" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="10" y="855" width="40" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_orange_box" value="" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;" vertex="1" parent="1">
+          <mxGeometry x="55" y="855" width="12" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_orange_text" value="执行人操作/回退" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="70" y="855" width="80" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_green_box" value="" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#A5D6A7;" vertex="1" parent="1">
+          <mxGeometry x="160" y="855" width="12" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_green_text" value="配合人验证/检查" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="175" y="855" width="80" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_gray_box" value="" style="rounded=4;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="265" y="855" width="12" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_gray_text" value="等待/放行" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="280" y="855" width="60" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_arrow" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#1E3A8A;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="40" height="40" relative="1" as="geometry">
+            <mxPoint x="355" y="861" as="sourcePoint"/>
+            <mxPoint x="385" y="861" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend_arrow_text" value="执行→验证" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="390" y="855" width="60" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_label" value="[动作类型] 标签" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="460" y="855" width="80" height="15" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
