@@ -1,0 +1,391 @@
+{
+  "change_instance_id": "GOMSC20260105009315001",
+  "data_type": "xian_screen_semantic_events",
+  "version": "v1.0",
+  "events": [
+    {
+      "event_id": "EVT-00001",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 1 告警等检测 / 告警检测",
+      "event_time": "2026-01-18 22:05:10",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CloudMonitor平台",
+      "semantic_action": "查询",
+      "target_object": "未处理告警、集群SLA、1043006-bill-progress-delay告警",
+      "semantic_description": "识别到配合人在 CloudMonitor 平台查询待变更集群的未处理告警、集群 SLA 和话单落后告警，返回未发现影响告警。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660901",
+          "time_range": "2026-01-18 22:05:10 ~ 2026-01-18 22:06:22"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660901_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00002",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 1 告警等检测 / 拨测检测",
+      "event_time": "2026-01-18 22:07:03",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CloudProbe平台",
+      "semantic_action": "查询",
+      "target_object": "拨测任务 obs-bill-probe-cn-east-3",
+      "semantic_description": "识别到配合人查询拨测任务运行状态，返回 probe_status=normal，failed_count=0。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660902",
+          "time_range": "2026-01-18 22:07:03 ~ 2026-01-18 22:08:11"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660902_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00003",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 1 告警等检测 / 容量检测",
+      "event_time": "2026-01-18 22:09:20",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CapacityCenter平台",
+      "semantic_action": "查询",
+      "target_object": "未变更节点容量、灰度策略容量风险",
+      "semantic_description": "识别到配合人查询灰度策略下未变更节点容量，返回 remain_capacity_ratio=72%，capacity_risk=false。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660903",
+          "time_range": "2026-01-18 22:09:20 ~ 2026-01-18 22:11:02"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660903_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00004",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 1 告警等检测 / 核心组件性能&运行状态检测",
+      "event_time": "2026-01-18 22:12:10",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "AOM平台",
+      "semantic_action": "查询",
+      "target_object": "bill-service 时延、错误率、流量、运行状态",
+      "semantic_description": "识别到配合人查询核心组件 bill-service 的时延、错误率、流量和运行状态，结果均正常。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660904",
+          "time_range": "2026-01-18 22:12:10 ~ 2026-01-18 22:14:09"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660904_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00005",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 1 告警等检测 / 性能检测",
+      "event_time": "2026-01-18 22:15:34",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "AOM平台",
+      "semantic_action": "查询",
+      "target_object": "obs-bill-api 请求量、网关流量",
+      "semantic_description": "识别到配合人查询 API 请求量和网关流量，返回 request_count_status=normal，gateway_traffic_status=normal。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660905",
+          "time_range": "2026-01-18 22:15:34 ~ 2026-01-18 22:17:16"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660905_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00006",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "01 操作检测 / 4 增程商品配置确认",
+      "event_time": "2026-01-18 22:30:00",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CBC配置平台",
+      "semantic_action": "查询",
+      "target_object": "DomainId、ProductName、ResourceSpecCode、ExtendProductName、CBC侧配置状态",
+      "semantic_description": "识别到配合人查询并确认本次增程商品配置参数，确认 operation_type=create，CBC 侧配置已完成。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155660906",
+          "time_range": "2026-01-18 22:30:00 ~ 2026-01-18 22:34:21"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155660906_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00007",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "02 操作处理 / 1 创建增程商品 / 创建增程商品",
+      "event_time": "2026-01-18 23:23:55",
+      "actor": "汪旭(w30053007)",
+      "actor_role": "执行人",
+      "event_source": "CAC平台",
+      "semantic_action": "执行",
+      "target_object": "cac_obs_oam_cli_execute / service create obsBillExtendProduct",
+      "semantic_description": "识别到执行人在 CAC 平台执行 cac_obs_oam_cli_execute 创建增程商品，参数包含 domainiddomainiddomainiddo000198||get||ext.get.type1||get-ext，执行结果 success。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661007",
+          "time_range": "2026-01-18 23:23:55 ~ 2026-01-18 23:45:59"
+        },
+        {
+          "evidence_type": "视频帧",
+          "evidence_id": "video_155661007_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00008",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "02 操作处理 / 1 创建增程商品 / 操作验证",
+      "event_time": "2026-01-18 23:52:00",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "终端",
+      "semantic_action": "执行",
+      "target_object": "grep -A 3 domainiddomainiddomainiddo000198:get bill_extend_product.json",
+      "semantic_description": "识别到配合人在终端执行创建增程商品后的 grep 验证命令，create 于 23:45:59 结束，grep 于 23:52 执行，满足等待 5 分钟后的验证要求。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "black_screen",
+          "log_id": "LPA-20260417090847-226850",
+          "time_range": "2026-01-18 23:52:00 ~ 2026-01-18 23:52:59"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "terminal_2352_grep_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00009",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 告警等基本检测 / 告警检测",
+      "event_time": "2026-01-19 00:02:11",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CloudMonitor平台",
+      "semantic_action": "查询",
+      "target_object": "变更后未处理告警、1043006-bill-progress-delay告警",
+      "semantic_description": "识别到配合人在变更后复查告警，返回 new_alarm_count=0，impact_alarm_count=0，未发现话单落后告警。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661101",
+          "time_range": "2026-01-19 00:02:11 ~ 2026-01-19 00:03:25"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155661101_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00010",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 告警等基本检测 / 拨测检测",
+      "event_time": "2026-01-19 00:03:41",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CloudProbe平台",
+      "semantic_action": "查询",
+      "target_object": "变更后拨测任务 obs-bill-probe-cn-east-3",
+      "semantic_description": "识别到配合人在变更后查询拨测状态，返回 probe_status=normal。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661102",
+          "time_range": "2026-01-19 00:03:41 ~ 2026-01-19 00:04:30"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155661102_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00011",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 告警等基本检测 / 容量检测",
+      "event_time": "2026-01-19 00:04:45",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CapacityCenter平台",
+      "semantic_action": "查询",
+      "target_object": "变更后未变更节点容量",
+      "semantic_description": "识别到配合人在变更后查询容量状态，返回 capacity_status=normal。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661103",
+          "time_range": "2026-01-19 00:04:45 ~ 2026-01-19 00:06:20"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155661103_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00012",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 告警等基本检测 / 核心组件性能&运行状态检测",
+      "event_time": "2026-01-19 00:06:30",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "AOM平台",
+      "semantic_action": "查询",
+      "target_object": "变更后 bill-service 时延、错误率、运行状态",
+      "semantic_description": "识别到配合人在变更后查询核心组件指标，返回 latency=normal，error_rate=normal，running_status=normal。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661104",
+          "time_range": "2026-01-19 00:06:30 ~ 2026-01-19 00:08:05"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155661104_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00013",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 告警等基本检测 / 性能检测",
+      "event_time": "2026-01-19 00:08:20",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "AOM平台",
+      "semantic_action": "查询",
+      "target_object": "变更后 API 请求量、网关流量",
+      "semantic_description": "识别到配合人在变更后查询 API 请求量和网关流量，返回 request_count_status=normal，gateway_traffic_status=normal。虽然 SOP 写不涉及，但 mock 中保留为补充检测事件。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661105",
+          "time_range": "2026-01-19 00:08:20 ~ 2026-01-19 00:09:55"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_155661105_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00014",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "03 操作验证 / 1 验证配置的增程商品是否生效",
+      "event_time": "2026-01-19 00:10:38",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "CAC平台",
+      "semantic_action": "执行",
+      "target_object": "cac_obs_service_bill_download、bucket-name、timestamp、DomainId、sku字段、计费因子字段",
+      "semantic_description": "识别到配合人在 CAC 平台执行 cac_obs_service_bill_download 话单验证脚本，参数包含 bucket-name、timestamp=2026011816、delete_download_file=0，返回 success，并识别到 sku 字段和计费因子字段符合预期。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "21921334",
+          "time_range": "2026-01-19 00:10:38 ~ 2026-01-19 00:15:39"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "screen_21921334_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00015",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "04 操作回退 / 1 删除增程商品",
+      "event_time": "2026-01-19 00:30:10",
+      "actor": "汪旭(w30053007)",
+      "actor_role": "执行人",
+      "event_source": "CAC平台",
+      "semantic_action": "执行",
+      "target_object": "cac_obs_oam_cli_execute / service delete obsBillExtendProduct",
+      "semantic_description": "识别到执行人在 CAC 平台执行删除增程商品脚本，参数包含 DomainId=domainiddomainiddomainiddo000198||ProductName=get，执行结果 success。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "white_screen",
+          "log_id": "155661201",
+          "time_range": "2026-01-19 00:30:10 ~ 2026-01-19 00:34:40"
+        },
+        {
+          "evidence_type": "视频帧",
+          "evidence_id": "video_155661201_001"
+        }
+      ]
+    },
+    {
+      "event_id": "EVT-00016",
+      "change_instance_id": "GOMSC20260105009315001",
+      "sop_stage": "04 操作回退 / 1 删除增程商品 / 操作验证",
+      "event_time": "2026-01-19 00:40:00",
+      "actor": "朱建军(z60073130)",
+      "actor_role": "配合人",
+      "event_source": "终端",
+      "semantic_action": "执行",
+      "target_object": "grep -A 3 domainiddomainiddomainiddo000198:get bill_extend_product.json",
+      "semantic_description": "识别到配合人在终端执行回退后的 grep 验证命令，delete 于 00:34:40 结束，grep 于 00:40 执行，满足等待 5 分钟后的回退验证要求；回显查不到记录，表明回退成功。",
+      "evidence_refs": [
+        {
+          "evidence_type": "日志内容",
+          "log_table": "black_screen",
+          "log_id": "LPA-20260417090847-226901",
+          "time_range": "2026-01-19 00:40:00 ~ 2026-01-19 00:40:59"
+        },
+        {
+          "evidence_type": "截图",
+          "evidence_id": "terminal_0040_grep_001"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "sop_name": "创建增程商品变更 SOP",
+  "steps": [
+    {
+      "总步骤": "01 操作检测",
+      "步骤": "1 告警等检测",
+      "操作步骤": "从以下维度，（请基于业务属性扩展检测内容），分析当前操作对象所在Region是否可以变更：\n1.告警检测（必选）：分析未处理的告警，是否对本次变更存在影响。\n后台变更，不影响现有客户的业务，观察集群SLA，成功率保持99.99%以上\nhttps://cloudscope.huaweisre.com/obsMonitorDashboard3/#/dashboard\n检测待变更集群不存在话单落后告警 1043006-bill-progress-delay\n如果待变更集群存在1043006-bill-progress-delay告警，需要联系后台oncall确认\n2.拨测检测（必选）：检测拨测运行状态，是否存在异常。\n后台变更，不影响现有客户的业务\n3.容量检测：基于灰度策略分析，未进行变更的节点是否能承载所有流量。\n\n4.核心组件性能&运行状态：服务/组件指标分析（如时延，错误率，流量等）\n\n5.性能检测：服务/组件性能影响分析；（如api请求量，网关流量等）\n",
+      "操作步骤负责人": "配合人",
+      "操作验证": "完成告警分析，未发现影响；有影响告警未处理完成前禁止继续。\n拨测运行正常；如异常需恢复，否则禁止继续。",
+      "操作验证负责人": "配合人",
+      "操作回退": "不涉及"
+    },
+    {
+      "总步骤": "01 操作检测",
+      "步骤": "4 增程商品配置确认",
+      "负责人": "配合人",
+      "操作步骤": "一、提前跟研发人员（后台组计量田）确认本次需要变更的增程商品的以下信息：\n1、本次针对增程商品的操作类型（创建、修改、删除）\n2、本次操作涉及的DomainId、ProductName、ResourceSpecCode、ExtendProductName信息是否准确\n\n二、提起跟产品经理确认，CBC侧已经完成了本次增程商品的变更，如果CBC侧没有完成对应的增程配置，则停止变更",
+      "操作步骤负责人": "配合人",
+      "操作验证": "不涉及验证",
+      "操作验证负责人": "配合人",
+      "操作回退": "不涉及"
+    },
+    {
+      "总步骤": "02 操作处理",
+      "步骤": "1 创建增程商品",
+      "操作步骤": "注：增程商品配置提前跟研发人员（后台组计量田）确认清楚，单个局点的所有集群都要操作\n登陆CAC平台，执行脚本cac_obs_oam_cli_execute\n参数1 obsoamcliuser （固定值）\n参数2 CLI的用户密码Base64编码\n参数3 service（固定值）\n参数4 create（固定值）\n参数5 obsBillExtendProduct（固定值）\n参数6 ${DomainId}||${ProductName}||${ResourceSpecCode}||${ExtendProductName}（本次添加的增程商品配置，例如：domainiddomainiddomainiddo000198||get||ext.get.type1||get-ext，如果有多个增程商品，需要多次执行）\n执行用户：root\n目标主机：目标集群的任一oam-s-manager节点\n是否资源受限：否",
+      "操作步骤负责人": "执行人",
+      "操作验证": "等待5分钟。登陆CAC平台，选择目标集群所有bill组件节点，执行命令：grep -A 3 \"${DomainId}:${ProductName}\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json \n例如：grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json\n查看回显，如果能查到记录，并且配置信息与预期相符，则表明增程商品添加成功。如果回显的增程商品信息与预期不符，请检查命令下发的参数是否正确。如果查询不到，请联系service后台组研发同事进行确认。",
+      "操作验证负责人": "配合人",
+      "操作回退": "登陆CAC平台，执行脚本cac_obs_oam_cli_execute\n参数1 obsoamcliuser （固定值）\n参数2 CLI的用户密码Base64编码\n参数3 service（固定值）\n参数4 delete（固定值）\n参数5 obsBillExtendProduct（固定值）\n参数6 DomainId=${DomainId}（本次变更的账户Id）||ProductName=${ProductName}（本次变更的增程商品，例如：DomainId=domainiddomainiddomainiddo000198||ProductName=get）\n执行用户：root\n目标主机：目标集群的任一oam-s-manager节点\n是否资源受限：否\n操作验证：等待5分钟。登陆CAC平台，选择目标集群所有bill组件节点，执行命令：grep -A 3 \"${DomainId}:${ProductName}\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json \n例如：grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json\n查看回显，如果查不到记录，则表明回退成功。如果能查询到，请联系service后台组研发同事进行确认。",
+      "操作回退负责人": "执行人和配合人"
+    },
+    {
+      "总步骤": "03 操作验证",
+      "步骤": "1 告警等基本检测",
+      "负责人": "执行人和配合人",
+      "操作步骤": "1.告警等基本检测，从以下维度，分析当前操作对象所在Region是否可以变更：\n（1）.告警检测（必选）：分析未处理的告警，是否对本次变更存在影响。\n检测不存在话单落后告警 如果出现该告警，需要联系后台oncall确认该告警是否由本次变更引起，如果确认由该变更引起，需要回退，如果不是本次变更引起需要评估对验证步骤的影响\n（2）.拨测检测（必选）：检测拨测运行状态，是否存在异常。\n不涉及\n（3）.容量检测：基于灰度策略分析，未进行变更的节点是否能承载所有流量。\n不涉及\n（4）.核心组件性能&运行状态：服务/组件指标分析（如时延，错误率等）\n不涉及\n（5）.性能检测：服务/组件性能影响分析；（如api请求量，网关流量等）\n不涉及\n2.基本业务验证\n不影响基本业务",
+      "操作步骤负责人": "配合人",
+      "操作验证": "原表为空",
+      "操作验证负责人": "配合人",
+      "操作回退": "原表为空"
+    },
+    {
+      "总步骤": "03 操作验证",
+      "步骤": "1 验证配置的增程商品是否生效",
+      "操作步骤": "话单无落后的情况下，在执行完变更后的下一个小时（如2025/12/27 23:30完成变更，则需要在2025/12/28 00:10左右执行该校验任务，执行参数中的timestamp为2025122716）\n1.CAC平台，执行脚本cac_obs_service_bill_download\n参数一：bucket-name  当前变更用户的名下的任一桶\n参数二：timestamp  话单UTC时间戳，例如下载2025年12月27日08时的话单（话单内容为2025年12月27日7点到8点的产生的话单），则值为2025122700\n参数三：是否删除已下载的话单，填写0即可；下载话单后，在话单文件中过滤本次涉及的增程商品的domainID和增程计费因子，如果符合预期，则变更成功",
+      "操作步骤负责人": "配合人",
+      "操作验证": "可以看到筛选出的话单中的sku（以竖线分割的第8位），与计费因子字段（以竖线分割第13位）均符合预期（CAC的返回值未按行输出，可以粘贴至记事本中，方便观察结果）",
+      "操作验证负责人": "配合人",
+      "操作回退": "验证步骤，不涉及回退"
+    },
+    {
+      "总步骤": "04 操作回退",
+      "步骤": "1 删除增程商品",
+      "操作步骤": "登陆CAC平台，执行脚本cac_obs_oam_cli_execute\n参数1 obsoamcliuser （固定值）\n参数2 CLI的用户密码Base64编码\n参数3 service（固定值）\n参数4 delete（固定值）\n参数5 obsBillExtendProduct（固定值）\n参数6 DomainId=${DomainId}（本次变更的账户Id）||ProductName=${ProductName}（本次变更的增程商品，例如：DomainId=domainiddomainiddomainiddo000198||ProductName=get）\n执行用户：root\n目标主机：目标集群的任一oam-s-manager节点\n是否资源受限：否",
+      "操作步骤负责人": "执行人",
+      "操作验证": "等待5分钟。登陆CAC平台，选择目标集群所有bill组件节点，执行命令：grep -A 3 \"${DomainId}:${ProductName}\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json \n例如：grep -A 3 \"domainiddomainiddomainiddo000198:get\" /opt/dfv/obs_service_layer/objectwebservice/bill/conf/bill_extend_product.json\n查看回显，如果查不到记录，则表明回退成功。如果能查询到，请联系service后台组研发同事进行确认。",
+      "操作验证负责人": "配合人",
+      "操作回退": "不涉及，本步骤本身即回退动作"
+    }
+  ]
+}
